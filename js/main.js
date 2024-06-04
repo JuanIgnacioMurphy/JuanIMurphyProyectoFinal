@@ -317,10 +317,10 @@ function deployBuyButtons() {
 //// ARRAY DEL CARRITO ////
 
 let cart;
-const checkLocalStorage = JSON.parse(localStorage.getItem("cart-products"))
+let checkLocalStorage = localStorage.getItem("cart-products")
 
 if (checkLocalStorage){
-    cart = checkLocalStorage;
+    cart = JSON.parse(checkLocalStorage);
     updateCartNumber();
 } else {
     cart = [];

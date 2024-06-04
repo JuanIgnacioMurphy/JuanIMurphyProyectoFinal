@@ -1,9 +1,15 @@
-const cart = JSON.parse(localStorage.getItem("cart-products"));
+let cart = localStorage.getItem("cart-products");
+
+cart = JSON.parse(cart);
 
 const cartContainer = document.querySelector("#cart-container")
 const cartActions = document.querySelector("#cart-actions")
+const emptyButton = document.querySelector("#cart-actions-empty")
+const priceTotal = document.querySelector("#total")
 
 function deployCart() {
+
+    
 
     cartContainer.innerHTML = "";
 
@@ -38,6 +44,7 @@ cart.forEach(product => {
     cartContainer.append(div);
 
     activateDeleteButtons();
+    getTotalPrice();
 
 });
 
@@ -55,7 +62,28 @@ function activateDeleteButtons() {
 
 function deleteFromCart(e) {
     let buttonId = e.currentTarget.id;
-    console.log(buttonId)
+    const targetProduct = cart.findIndex(product => product.id === buttonId);
+
+    cart.splice(targetProduct, 1);
+    deployCart();
+
+    localStorage.setItem("cart-products", JSON.stringify(cart));
+
+}
+
+emptyButton.addEventListener("click", emptyCart)
+
+function emptyCart(){
+
+    cart.length = 0;
+    localStorage.setItem("cart-products", JSON.stringify(cart))
+    deployCart();
+
+}
+
+function getTotalPrice() {
+    const getTotal = cart.reduce((acc, product) => acc + (product.price * product.cantidad), 0);
+    priceTotal.innerText = `$${getTotal}`;
 }
 
 
