@@ -1,6 +1,7 @@
 
 :root {
     --main-color: #9F87AF;
+    --main-color-toast: #420b66;
     --main-color-dark: #56426360;
     --main-background: #0f1820;
 
@@ -189,6 +190,14 @@ footer {
 
 /* *******CARRITO*******/
 
+.cart-background {
+        display: flex;
+        flex-direction: column;
+        background-color:  var(--main-background);
+        color: var(--main-color);
+        height: 100vh;
+}
+
 .cart-container {
     padding: 2rem;
     margin: 2rem;
@@ -245,7 +254,6 @@ footer {
     justify-content: space-between;
     background-color: var(--main-color-dark);
     border-radius: 1rem;
-
 }
 
 .cart-actions-empty {

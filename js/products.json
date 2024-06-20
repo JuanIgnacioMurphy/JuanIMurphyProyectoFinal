@@ -1,0 +1,230 @@
+[ 
+    {
+        "id": "remera-02",
+        "name": "Remera Nave verde",
+        "image": "./assets/images/remeras/remera-nave-verde.jpg",
+        "category": {
+            "name": "remeras",
+            "id": "remeras"
+        },
+        "price": 5000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "remera-03",
+        "name": "Remera Radiohead",
+        "image": "./assets/images/remeras/remera-radiohead.jpg",
+        "category": {
+            "name": "remeras",
+            "id": "remeras"
+        },
+        "price": 5000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "remera-04",
+        "name": "Remera Quentin",
+        "image": "./assets/images/remeras/remera-quentin.jpg",
+        "category": {
+            "name": "remeras",
+            "id": "remeras"
+        },
+        "price": 5000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "remera-05",
+        "name": "Remera Linkin Park",
+        "image": "./assets/images/remeras/remera-linkin-park.jpg",
+        "category": {
+            "name": "remeras",
+            "id": "remeras"
+        },
+        "price": 5000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "remera-06",
+        "name": "Remera Rolling",
+        "image": "./assets/images/remeras/remera-rolling.jpg",
+        "category": {
+            "name": "remeras",
+            "id": "remeras"
+        },
+        "price": 5000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "remera-07",
+        "name": "Remera Logo negra",
+        "image": "./assets/images/remeras/remera-logo-negra.jpg",
+        "category": {
+            "name": "remeras",
+            "id": "remeras"
+        },
+        "price": 5000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "remera-08",
+        "name": "Remera Logo verde",
+        "image": "./assets/images/remeras/remera-logo-verde.jpg",
+        "category": {
+            "name": "remeras",
+            "id": "remeras"
+        },
+        "price": 5000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "buzo-01",
+        "name": "Buzo Nirvana",
+        "image": "./assets/images/buzos/buzo-nirvana.jpg",
+        "category": {
+            "name": "buzos",
+            "id": "buzos"
+        },
+        "price": 10000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "buzo-02",
+        "name": "Buzo Nave",
+        "image": "./assets/images/buzos/buzo-nave.jpg",
+        "category": {
+            "name": "buzos",
+            "id": "buzos"
+        },
+        "price": 10000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "buzo-03",
+        "name": "Buzo Rolling",
+        "image": "./assets/images/buzos/buzo-rolling.jpg",
+        "category": {
+            "name": "buzos",
+            "id": "buzos"
+        },
+        "price": 10000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "buzo-04",
+        "name": "Buzo Linkn Park",
+        "image": "./assets/images/buzos/buzo-linkin-park.jpg",
+        "category": {
+            "name": "buzos",
+            "id": "buzos"
+        },
+        "price": 10000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "buzo-05",
+        "name": "Buzo ACDC",
+        "image": "./assets/images/buzos/buzo-acdc.jpg",
+        "category": {
+            "name": "buzos",
+            "id": "buzos"
+        },
+        "price": 10000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "poster-01",
+        "name": "Buzo ACDC Nave",
+        "image": "./assets/images/posters/poster-buzo-acdc.jpg",
+        "category": {
+            "name": "poster",
+            "id": "poster"
+        },
+        "price": 10000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "poster-02",
+        "name": "Buzo Fight Club",
+        "image": "./assets/images/posters/poster-buzo-fight-club.jpg",
+        "category": {
+            "name": "poster",
+            "id": "poster"
+        },
+        "price": 10000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "poster-03",
+        "name": "Buzo Jackie Brown",
+        "image": "./assets/images/posters/poster-buzo-jackie.jpg",
+        "category": {
+            "name": "poster",
+            "id": "poster"
+        },
+        "price": 10000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "poster-04",
+        "name": "Buzo QOTS",
+        "image": "./assets/images/posters/poster-buzo-qotsa.jpg",
+        "category": {
+            "name": "poster",
+            "id": "poster"
+        },
+        "price": 10000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "poster-05",
+        "name": "Buzo La Renga",
+        "image": "./assets/images/posters/poster-buzo-renga.jpg",
+        "category": {
+            "name": "poster",
+            "id": "poster"
+        },
+        "price": 10000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "poster-06",
+        "name": "Buzo Rolling",
+        "image": "./assets/images/posters/poster-buzo-rolling.jpg",
+        "category": {
+            "name": "poster",
+            "id": "poster"
+        },
+        "price": 10000,
+        "cantidad": 1
+    },
+
+    {
+        "id": "poster-07",
+        "name": "Buzo Tarantino",
+        "image": "./assets/images/posters/poster-buzo-tarantino.jpg",
+        "category": {
+            "name": "poster",
+            "id": "poster"
+        },
+        "price": 10000,
+        "cantidad": 1
+    }
+
+]

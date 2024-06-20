@@ -69,11 +69,33 @@ function deleteFromCart(e) {
 
     localStorage.setItem("cart-products", JSON.stringify(cart));
 
+    Toastify({
+        text: "Producto eliminado",
+        duration: 4000,
+        destination: "#",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "left", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        offset: {
+            x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: 100 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        style: {
+            background: "linear-gradient(to bottom, #56426360, #0f1820)",
+            borderRadius: "10px",
+
+        },
+        onClick: function () { } // Callback after click
+    }).showToast();
+
 }
 
 emptyButton.addEventListener("click", emptyCart)
 
 function emptyCart(){
+
 
     cart.length = 0;
     localStorage.setItem("cart-products", JSON.stringify(cart))
