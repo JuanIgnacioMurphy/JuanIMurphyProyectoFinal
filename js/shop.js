@@ -56,6 +56,7 @@ function deleteFromCart(e) {
     cart.splice(targetProductIndex, 1);
     deployCart();
     localStorage.setItem("cart-products", JSON.stringify(cart));
+    getTotalPrice();
 
     Toastify({
         text: "Producto eliminado",
@@ -77,48 +78,59 @@ function deleteFromCart(e) {
 emptyButton.addEventListener("click", emptyCart);
 
 function emptyCart() {
-    const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-            confirmButton: "btn btn-success",
-            cancelButton: "btn btn-danger"
-        },
-        buttonsStyling: true
-    });
 
-    swalWithBootstrapButtons.fire({
-        title: "¿Estás seguro?",
-        text: "¡Vas a eliminar todos los productos!",
-        icon: "warning",
-        iconHtml: '<i class="bi bi-exclamation-square" style="font-size: 4.5rem; color: #0f1820;"></i>',
-        showCancelButton: true,
-        confirmButtonText: "Sí, vaciar carrito",
-        cancelButtonText: "Quiero mis productos",
-        reverseButtons: true
-    }).then((result) => {
-        if (result.isConfirmed) {
-            swalWithBootstrapButtons.fire({
-                title: "¡Carrito borrado!",
-                text: "Carrito eliminado",
-                icon: "success",
-                iconHtml: '<i class="bi bi-trash3-fill" style="font-size: 4.5rem; color: #0f1820;"></i>'
-            });
+    if (cart.length >= 1) {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: true
+        });
 
-
-            cart.length = 0;
-            localStorage.setItem("cart-products", JSON.stringify(cart));
-            deployCart();
-            getTotalPrice();
+        swalWithBootstrapButtons.fire({
+            title: "¿Estás seguro?",
+            text: "¡Vas a eliminar todos los productos!",
+            icon: "warning",
+            iconHtml: '<i class="bi bi-exclamation-square" style="font-size: 4.5rem; color: #0f1820;"></i>',
+            showCancelButton: true,
+            confirmButtonText: "Sí, vaciar carrito",
+            cancelButtonText: "Quiero mis productos",
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                swalWithBootstrapButtons.fire({
+                    title: "¡Carrito borrado!",
+                    text: "Carrito eliminado",
+                    icon: "success",
+                    iconHtml: '<i class="bi bi-trash3-fill" style="font-size: 4.5rem; color: #0f1820;"></i>'
+                });
 
 
-        } else if (result.dismiss === Swal.DismissReason.cancel) {
-            swalWithBootstrapButtons.fire({
-                title: "¡Carrito salvado!",
-                text: "Gracias por comprar en Nave",
-                icon: "error",
-                iconHtml: `<i class="bi bi-hand-thumbs-up" style="font-size: 4.5rem; color: #0f1820;"></i>`
-            });
-        }
-    });
+                cart.length = 0;
+                localStorage.setItem("cart-products", JSON.stringify(cart));
+                deployCart();
+                getTotalPrice();
+
+
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                swalWithBootstrapButtons.fire({
+                    title: "¡Carrito salvado!",
+                    text: "Gracias por comprar en Nave",
+                    icon: "error",
+                    iconHtml: `<i class="bi bi-hand-thumbs-up" style="font-size: 4.5rem; color: #0f1820;"></i>`
+                });
+            }
+        });
+    } else {
+        Swal.fire({
+            icon: "error",
+            iconHtml:`<i class="bi bi-bag"></i>`,
+            title: "Tu carrito está vacío",
+            text: "",
+            footer: '<a href="./index.html">Vamos a llenarlo</a>'
+            })
+    }
 }
 
 function getTotalPrice() {

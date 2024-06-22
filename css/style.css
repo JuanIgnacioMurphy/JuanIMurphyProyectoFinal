@@ -88,7 +88,7 @@ header {
     cursor: pointer;
 }
 
-.nav-button:hover {
+.nav-btn:hover {
     transform: scale(1.2);
 }
 
@@ -305,4 +305,8 @@ footer {
 
 .swal2-confirm {
     background-color: #7c2020 !important;
+}
+
+.swal2-icon-content {
+    color: var(--main-background) !important;
 }
