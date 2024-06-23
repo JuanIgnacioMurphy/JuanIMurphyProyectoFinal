@@ -182,18 +182,12 @@ main {
     color: var(--main-color);
 }
 
-footer {
-    background-color: var(--main-color);
-    color: var(--main-background);
-    height: 5rem;
-    bottom: 0;
-}
 
 
 /********CARRITO*******/
 
 .cart-background {
-    min-height: 60rem;
+    min-height: 20rem;
 }
 
 .cart-container {
@@ -309,4 +303,70 @@ footer {
 
 .swal2-icon-content {
     color: var(--main-background) !important;
+}
+
+
+footer {
+    display: flex;
+    gap: 2rem;
+    border-radius: 2rem;
+    background-color: var(--main-color);
+    color: var(--main-background);
+    bottom: 0;
+    padding: 2rem;
+    margin: .5rem;
+    height: 15rem;
+    align-self: center;
+    width: 95%;
+    justify-content: space-between;
+    
+}
+
+
+.page-closer {
+    display: flex;
+    gap: 3rem;
+    background-color: var(--main-color);
+    color: var(--main-background);
+    width: 90%;
+}
+
+.user-data {
+    margin-top: 2rem;
+    gap: 15px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 30%;
+}
+
+.user-image {
+    height: 5rem;
+    width: 5rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.user-review {
+    font-size: 14px;
+}
+
+.user-data-text {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.footer-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 10%;
+}
+
+.user-name {
+    color: black !important;
 }
