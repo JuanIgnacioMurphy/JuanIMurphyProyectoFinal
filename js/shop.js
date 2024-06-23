@@ -1,9 +1,14 @@
 let cart = localStorage.getItem("cart-products");
 cart = JSON.parse(cart) || [];
 
+//// LLAMADOS AL DOM ////
+
 const cartContainer = document.querySelector("#cart-container");
 const emptyButton = document.querySelector("#cart-actions-empty");
 const priceTotal = document.querySelector("#total");
+const buyButton = document.querySelector("#cart-actions-buy")
+
+//// FUNCIONES ////
 
 function deployCart() {
     if (cart.length >= 1) {
@@ -73,9 +78,18 @@ function deleteFromCart(e) {
             borderRadius: "10px"
         },
     }).showToast();
+    getTotalPrice();
+
 }
 
 emptyButton.addEventListener("click", emptyCart);
+
+function deleteProducts() {
+    cart.length = 0;
+    localStorage.setItem("cart-products", JSON.stringify(cart));
+    deployCart();
+    getTotalPrice();
+}
 
 function emptyCart() {
 
@@ -107,10 +121,7 @@ function emptyCart() {
                 });
 
 
-                cart.length = 0;
-                localStorage.setItem("cart-products", JSON.stringify(cart));
-                deployCart();
-                getTotalPrice();
+                deleteProducts();
 
 
             } else if (result.dismiss === Swal.DismissReason.cancel) {
@@ -125,11 +136,37 @@ function emptyCart() {
     } else {
         Swal.fire({
             icon: "error",
-            iconHtml:`<i class="bi bi-bag"></i>`,
+            iconHtml: `<i class="bi bi-bag"></i>`,
             title: "Tu carrito está vacío",
             text: "",
             footer: '<a href="./index.html">Vamos a llenarlo</a>'
-            })
+        })
+    }
+}
+
+
+buyButton.addEventListener("click", buyCart)
+
+function buyCart() {
+    if (cart.length >= 1) {
+        Swal.fire({
+            title: "¡Compra realizada!",
+            text: "Gracias por confiar en Nave",
+            icon: "",
+            iconHtml: `<i class="bi bi-emoji-laughing style="font-size: 4.5rem; color: #0f1820;"></i>`
+        });
+
+        deleteProducts();
+
+        
+    } else {
+        Swal.fire({
+            icon: "",
+            iconHtml: `<i class="bi bi-emoji-astonished style="font-size: 4.5rem; color: #0f1820;"></i>`,
+            title: "Tu carrito está vacío",
+            text: "",
+            footer: '<a href="./index.html">Vamos a revisar la pilcha</a>'
+        });
     }
 }
 
@@ -137,5 +174,7 @@ function getTotalPrice() {
     const getTotal = cart.reduce((acc, product) => acc + (product.price * product.cantidad), 0);
     priceTotal.innerText = `$${getTotal}`;
 }
+
+//// DISPARO INICIAL DE LA PÁGINA CART ////
 
 deployCart();

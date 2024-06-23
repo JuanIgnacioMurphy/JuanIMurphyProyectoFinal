@@ -13,7 +13,7 @@ fetch("./js/products.json")
         "Me compré una remera y a la semana me volvía comprar 3 más, impecable calidad.",
         "Aguante Nave de Fibra! Aguante el Oeste! Y AGUANTE EL POCHOCLO",
         "Muy buena calidad, recomiendo.",
-        "Soy de Haedo y me encanta la marca... también con el pochoclo",
+        "Soy de Haedo y me encanta la marca... también el pochoclo",
         "Excelente atención y servicio. Me compré de todo, incluído el pochoclo",
         "Soy una persona con gustos raros y acá encontré todo lo que estaba buscando... ¡hasta el pochoclo!",
         "Me gusta mucho la marca y la verdad son re baratos. Pochoclo!",
