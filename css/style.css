@@ -118,7 +118,8 @@ main {
 }
 
 .banner {
-    margin: 2rem;
+    margin: .5rem;
+    margin-bottom: 1rem;
     font-size: 2rem;
 }
 

@@ -76,7 +76,7 @@ filterButtons.forEach(button => {
             deployProducts(filteredProducts);
 
         } else {
-            mainTitle.innerText = "Todos los productos";
+            mainTitle.innerText = "TODOS LOS PRODUCTOS";
             deployProducts(products);
         }
 
@@ -92,15 +92,11 @@ function deployBuyButtons() {
 
 //// ARRAY DEL CARRITO ////
 
-let cart;
-let checkLocalStorage = localStorage.getItem("cart-products")
-
-if (checkLocalStorage) {
-    cart = JSON.parse(checkLocalStorage);
+let cart = localStorage.getItem("cart-products") ? JSON.parse(localStorage.getItem("cart-products")) : [];
+if (cart.length) {
     updateCartNumber();
-} else {
-    cart = [];
 }
+
 
 
 //// AGREGAR PRODUCTOS AL CARRITO ////
