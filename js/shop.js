@@ -157,6 +157,7 @@ function buyCart() {
         });
 
         deleteProducts();
+        getTotalPrice();
 
         
     } else {
